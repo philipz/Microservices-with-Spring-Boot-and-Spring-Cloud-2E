@@ -1,3 +1,11 @@
+pluginManagement {
+    repositories {
+        // ...
+        maven { url 'https://repo.spring.io/release' }
+        gradlePluginPortal()
+    }
+}
+
 include ':api'
 include ':util'
 include ':microservices:product-service'
