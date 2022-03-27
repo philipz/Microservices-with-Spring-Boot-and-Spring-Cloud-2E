@@ -2,25 +2,25 @@ version: '2.1'
 
 services:
   product:
-    build: microservices/product-service
+    image: product-service:1.0.0-SNAPSHOT
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   recommendation:
-    build: microservices/recommendation-service
+    image: recommendation-service:1.0.0-SNAPSHOT
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   review:
-    build: microservices/review-service
+    image: review-service:1.0.0-SNAPSHOT
     mem_limit: 512m
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   product-composite:
-    build: microservices/product-composite-service
+    image: product-composite-service:1.0.0-SNAPSHOT
     mem_limit: 512m
     ports:
       - "8080:8080"
